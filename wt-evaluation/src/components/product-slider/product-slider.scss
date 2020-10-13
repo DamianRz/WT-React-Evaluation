@@ -1,25 +1,26 @@
 @import '../../theme/colors.scss';
 
+
 .product-slider {
     .product-step {
         position: relative;
         width: 100%;
-        height: 25vw;
+        // height: 25vw;
         min-height: 300px;
         background-color: $p_light;
+        display: flex;
+        align-items: center;
 
         .product {
             position: relative;
-            width: 80%;
-            padding: 0 40px;
-            height: 100%;
+            width: 70%;
+            height: max-content;
             margin: auto;
-            // background-color: grey;
+            // background-color: green;
             display: flex;
             align-items: center;
 
             .left-box {
-                // background-color: green;
                 width: 50%;
                 height: max-content;
                 z-index: 1;
@@ -41,7 +42,8 @@
 
                 .buy-btn {
                     width: 20vw;
-                    height: 60px;
+                    min-width: 150px;
+                    height: 40px;
                     border-radius: 8px;
                     border-style: none;
                     background-color: $s_dark;
@@ -62,10 +64,14 @@
                 height: 100%;
                 display: flex;
                 align-items: center;
-                // background-color: rgb(92, 161, 92);
+                background-color: green;
 
                 .price-box {
                     position: relative;
+
+                    .cents-box {
+                        padding-top: 15px;
+                    }
 
                     .usd,
                     .cents,
@@ -84,12 +90,16 @@
 
                 .paint-img {
                     position: absolute;
-                    top: -25%;
-                    right: 12%;
                     width: 55vw;
-                    border-style: none;
+                    left: 28%;
+                    display: block;
+                    margin: auto;
+                    // background-color: green;
+                    // top: -20%;
+                    // right: 12%;
+                    // border-style: none;
                     filter: grayscale(1);
-                    transform: rotate(-45deg);
+                    transform: rotate(290deg);
                 }
 
                 .paint-img.active {

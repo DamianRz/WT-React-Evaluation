@@ -1,8 +1,8 @@
 import React from 'react';
-import Slider from 'react-slick';
-import './carousel.scss';
+import SlickSlider from 'react-slick';
+import './slider.scss';
 
-export const Carousel = ({ steps }) => {
+export const Slider = ({ steps, className }) => {
     const defaultConf = {
         dots: false,
         infinite: true,
@@ -12,8 +12,8 @@ export const Carousel = ({ steps }) => {
     };
 
     return (
-        <Slider {...defaultConf} className="slider">
+        <SlickSlider className={className} {...defaultConf} className="slider">
             {steps}
-        </Slider>
+        </SlickSlider>
     );
 }
