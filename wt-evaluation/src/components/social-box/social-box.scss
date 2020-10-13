@@ -1,0 +1,19 @@
+@import '../../theme/colors.scss';
+
+.social-box {
+    display: flex;
+
+    .title {
+        color: $text_on_p;
+    }
+
+    .social-icon {
+        margin-left: 10px;
+        color: $secondary;
+        border-radius: 50%;
+    }
+
+    .social-icon:hover {
+        color: $s_light;
+    }
+}

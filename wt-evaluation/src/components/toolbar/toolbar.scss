@@ -1,0 +1,23 @@
+@import '../../theme/colors.scss';
+
+.toolbar {
+    position: relative;
+    background-color: $p_dark;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+    .left-box {
+        padding-left: 20px;
+
+        .title {
+            color: $text_on_p;
+        }
+    }
+
+    .right-box {
+        padding-right: 20px;
+        margin-left: auto;
+    }
+}
