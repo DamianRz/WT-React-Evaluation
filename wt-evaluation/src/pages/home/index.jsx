@@ -2,6 +2,7 @@ import React from 'react';
 import { Toolbar } from '../../components/toolbar';
 import { SocialBox } from '../../components/social-box';
 import { FaFacebook, FaInstagram } from 'react-icons/fa'
+import { ProductSlider } from '../../components/product-slider';
 import './home.scss';
 
 export const Home = () => {
@@ -21,6 +22,7 @@ export const Home = () => {
 
     return (
         <div className="home-page">
+
             <Toolbar
                 title="LandingPage"
                 rightContent={
@@ -29,6 +31,8 @@ export const Home = () => {
                         socialItems={socialBoxData.networks} />
                 }
             />
+
+            <ProductSlider />
         </div>
     )
 }
