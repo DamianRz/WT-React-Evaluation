@@ -1,0 +1,105 @@
+@import '../../theme/colors.scss';
+
+
+.product-slider {
+    .product-step {
+        position: relative;
+        width: 100%;
+        min-height: 300px;
+        background-color: $p_light;
+        display: flex;
+        align-items: center;
+
+        .product {
+            position: relative;
+            width: 70%;
+            height: max-content;
+            margin: auto;
+            display: flex;
+            align-items: center;
+
+            .left-box {
+                width: 50%;
+                height: max-content;
+                z-index: 1;
+
+                .name-1 {
+                    font-size: calc(6px + 2vw);
+                    text-transform: uppercase;
+                    color: $primary;
+                    opacity: 0.4;
+                }
+
+                .name-2 {
+                    font-size: calc(10px + 8vw);
+                    text-transform: uppercase;
+                    color: $primary;
+                    font-weight: bolder;
+                    opacity: 0.4;
+                }
+
+                .buy-btn {
+                    width: 20vw;
+                    min-width: 150px;
+                    height: 40px;
+                    border-radius: 8px;
+                    border-style: none;
+                    background-color: $s_dark;
+                    color: $text_on_s;
+                    font-weight: bolder;
+                    letter-spacing: .5vw;
+                    font-size: calc(6px + 1vw);
+                }
+
+                .buy-btn:hover {
+                    cursor: pointer;
+                    background-color: $secondary;
+                }
+            }
+
+            .right-box {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+                .price-box {
+                    position: relative;
+
+                    .cents-box {
+                        padding-top: 15px;
+                    }
+
+                    .usd,
+                    .cents,
+                    .month {
+                        font-size: calc(6px + 2vw);
+                        color: $text_on_p;
+                    }
+
+                    .price {
+                        font-size: calc(10px + 8vw);
+                        text-transform: uppercase;
+                        color: $text_on_p;
+                        font-weight: bolder;
+                    }
+                }
+
+                .paint-img {
+                    position: absolute;
+                    width: 55vw;
+                    left: 25%;
+                    display: block;
+                    margin: auto;
+                    filter: grayscale(1);
+                    opacity: 0.8;
+                    transform: rotate(170deg);
+                }
+
+                .paint-img.active {
+                    filter: grayscale(0);
+                }
+            }
+        }
+    }
+}

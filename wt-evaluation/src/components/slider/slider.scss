@@ -1,0 +1,29 @@
+@import '../../theme/colors.scss';
+
+.slider {
+
+    .slick-prev,
+    .slick-next {
+        z-index: 1;
+    }
+
+    .slick-prev {
+        left: 20px;
+    }
+
+    .slick-next {
+        right: 50px;
+    }
+
+    .slick-prev::before,
+    .slick-next::before {
+        color: $secondary !important;
+        font-size: 50px;
+        line-height: 0 !important;
+    }
+
+    .slick-prev::hover,
+    .slick-next::hover {
+        color: $s_light !important;
+    }
+}
