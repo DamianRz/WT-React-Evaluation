@@ -12,57 +12,26 @@
         }
 
         .product-step {
-            // min-height: 400px;
-            // min-height: max-content;
-
             .product {
                 display: flex;
                 padding: 20px 0px;
                 width: calc(100vw - 40px);
                 height: max-content;
-                // background-color: orangered;
 
                 .left-box {
-                    // background-color: silver;
-
-                    .name-1 {}
-
-                    .name-2 {}
-
                     .buy-btn {
                         margin-top: 80%;
                     }
-
-                    .buy-btn:hover {}
                 }
 
                 .right-box {
-                    // background-color: green;
                     margin-top: 20%;
                     height: max-content;
 
-                    .price-box {
-
-                        .usd-box {}
-
-                        .cents-box {}
-
-                        .usd,
-                        .cents,
-                        .month {}
-
-                        .price {}
-                    }
-
                     .paint-img {
                         min-width: 360px;
-                        // transform: rotate(100deg);
-                        left: 15%;
-                        // width: 80vw;
-                        // top: 5%;// left: 10vw;
+                        left: 10%;
                     }
-
-                    .paint-img.active {}
                 }
             }
         }
