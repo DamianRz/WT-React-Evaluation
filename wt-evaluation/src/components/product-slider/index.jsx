@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Slider } from '../slider';
 import Paint1 from '../../paint-1.png';
+import Paint2 from '../../paint-2.png';
+import Paint3 from '../../paint-3.png';
 import './product-slider.scss';
 import './product-slider-mobile.scss';
 import '../../theme/theme.scss';
@@ -13,17 +15,17 @@ export const ProductSlider = () => {
         {
             name: 'product one',
             price: 'U$S 89 .99 /mes',
-            img: ''
+            img: Paint1
         },
         {
             name: 'product two',
             price: 'U$S 99 .50 /mes',
-            img: ''
+            img: Paint2
         },
         {
             name: 'product three',
             price: 'U$S 99 .99 /mes',
-            img: ''
+            img: Paint3
         }
     ]
 
@@ -44,7 +46,7 @@ export const ProductSlider = () => {
                             className="buy-btn">COMPRAR</button>
                     </div>
                     <div className="right-box">
-                        <img className={`paint-img ${activeEffect && 'active'}`} src={Paint1} alt="" />
+                        <img className={`paint-img ${activeEffect && 'active'}`} src={img} alt="" />
                         <div className="price-box">
                             <table>
                                 <tr>
