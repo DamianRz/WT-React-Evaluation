@@ -12,17 +12,17 @@ export const ProductSlider = () => {
     const productsData = [
         {
             name: 'product one',
-            price: 'U$D 89 .99 /mes',
+            price: 'U$S 89 .99 /mes',
             img: ''
         },
         {
             name: 'product two',
-            price: 'U$D 99 .50 /mes',
+            price: 'U$S 99 .50 /mes',
             img: ''
         },
         {
             name: 'product three',
-            price: 'U$D 100 .00 /mes',
+            price: 'U$S 99 .99 /mes',
             img: ''
         }
     ]

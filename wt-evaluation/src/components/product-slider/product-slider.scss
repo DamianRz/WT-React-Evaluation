@@ -92,7 +92,8 @@
                     display: block;
                     margin: auto;
                     filter: grayscale(1);
-                    transform: rotate(290deg);
+                    opacity: 0.8;
+                    transform: rotate(170deg);
                 }
 
                 .paint-img.active {

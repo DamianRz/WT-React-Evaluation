@@ -19,18 +19,36 @@
                 height: max-content;
 
                 .left-box {
+
+                    .name-1 {
+                        font-size: 26px !important;
+                    }
+
+                    .name-2 {
+                        font-size: 80px !important;
+                    }
+
                     .buy-btn {
                         margin-top: 80%;
                     }
                 }
 
                 .right-box {
-                    margin-top: 20%;
                     height: max-content;
 
+                    .usd,
+                    .cents,
+                    .month {
+                        font-size: 26px !important;
+                    }
+
+                    .price {
+                        font-size: 80px !important;
+                    }
+
                     .paint-img {
-                        min-width: 360px;
-                        left: 25vw;
+                        min-width: 440px;
+                        left: 18vw;
                     }
                 }
             }
