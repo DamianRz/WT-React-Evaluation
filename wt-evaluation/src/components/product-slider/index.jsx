@@ -12,7 +12,7 @@ export const ProductSlider = () => {
     const productsData = [
         {
             name: 'product one',
-            price: 'U$D 90 .99 /mes',
+            price: 'U$D 89 .99 /mes',
             img: ''
         },
         {
@@ -22,7 +22,7 @@ export const ProductSlider = () => {
         },
         {
             name: 'product three',
-            price: 'U$D 99 .99 /mes',
+            price: 'U$D 100 .00 /mes',
             img: ''
         }
     ]
