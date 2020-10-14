@@ -12,17 +12,23 @@
     .articles {
         display: flex;
         flex-wrap: wrap;
-        // align-items: center;
+        margin: 20px 0;
+
+        table {
+            margin: auto;
+
+            td {
+                vertical-align: baseline;
+            }
+        }
+
 
         .article {
             position: relative;
             width: 200px;
-            height: max-content;
             border-radius: 8px;
-            // margin: auto;
-            margin: 20px 20px;
+            margin: 20px 10px;
             box-shadow: 0px 1px 1px 1px $p_light;
-
 
             .article-img {
                 width: 100%;
