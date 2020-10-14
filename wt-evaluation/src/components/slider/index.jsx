@@ -13,12 +13,10 @@ export const Slider = ({ steps, className }) => {
 
     return (
         <SlickSlider
-            className={className}
+            className={`slider ${className}`}
             {...defaultConf}
-            className="slider">
-
+        >
             {steps}
-
         </SlickSlider>
     );
 }

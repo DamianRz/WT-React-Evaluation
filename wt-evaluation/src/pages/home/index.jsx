@@ -1,7 +1,7 @@
 import React from 'react';
 import { Toolbar } from '../../components/toolbar';
 import { SocialBox } from '../../components/social-box';
-import { FaFacebook, FaFacebookF, FaInstagram } from 'react-icons/fa'
+import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { ProductSlider } from '../../components/product-slider';
 import './home.scss';
 import './home-mobile.scss';
