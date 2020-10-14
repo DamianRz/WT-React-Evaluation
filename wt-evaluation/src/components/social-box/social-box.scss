@@ -1,4 +1,6 @@
 @import '../../theme/colors.scss';
+@import '../../theme/fonts.scss';
+
 
 .social-box {
     display: flex;
@@ -7,6 +9,7 @@
     .title {
         color: $text_on_p;
         opacity: 0.6;
+        font-size: $font_size_medium;
     }
 
     .social-icon {
