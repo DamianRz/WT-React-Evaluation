@@ -2,9 +2,9 @@ import React from 'react';
 import './toolbar.scss';
 import '../../theme/theme.scss';
 
-export const Toolbar = ({ title, rightContent }) => {
+export const Toolbar = ({ title, rightContent, className }) => {
     return (
-        <div className="toolbar">
+        <div className={`toolbar ${className}`}>
             <div className="left-box">
                 {title && <p className="title theme-text">{title}</p>}
             </div>

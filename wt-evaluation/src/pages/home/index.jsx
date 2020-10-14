@@ -1,16 +1,17 @@
 import React from 'react';
 import { Toolbar } from '../../components/toolbar';
 import { SocialBox } from '../../components/social-box';
-import { FaFacebook, FaInstagram } from 'react-icons/fa'
+import { FaFacebook, FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { ProductSlider } from '../../components/product-slider';
 import './home.scss';
+import './home-mobile.scss';
 
 export const Home = () => {
     const socialBoxData = {
         title: 'SEGUÍ CONECTADO',
         networks: [
             {
-                icon: <FaFacebook />,
+                icon: <FaFacebookF />,
                 url: 'http://www.facebook.com/WundermanThompson'
             },
             {
@@ -24,9 +25,11 @@ export const Home = () => {
         <div className="home-page">
 
             <Toolbar
-                title="LandingPage"
+                title="Landing Page"
+                className="home-toolbar"
                 rightContent={
                     <SocialBox
+                        className="social-box"
                         title={socialBoxData.title}
                         socialItems={socialBoxData.networks} />
                 }

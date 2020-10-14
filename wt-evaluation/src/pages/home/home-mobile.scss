@@ -1,0 +1,9 @@
+@import '../../theme/screen-sizes.scss';
+
+@media only screen and (max-width: $mobile-screeen-width) {
+    .social-box {
+        .title {
+            visibility: hidden;
+        }
+    }
+}

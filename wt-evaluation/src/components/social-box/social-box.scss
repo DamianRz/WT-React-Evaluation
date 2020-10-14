@@ -2,18 +2,43 @@
 
 .social-box {
     display: flex;
+    align-items: center;
 
     .title {
         color: $text_on_p;
+        opacity: 0.6;
     }
 
     .social-icon {
+        width: 30px;
+        height: 30px;
         margin-left: 10px;
-        color: $secondary;
+        color: $text_on_p;
+        opacity: 0.6;
         border-radius: 50%;
+        border-style: solid;
+        border-width: 2px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin: auto;
+        }
     }
 
     .social-icon:hover {
-        color: $s_light;
+        color: $s_light !important;
+    }
+}
+
+.social-box:hover {
+    .title {
+        opacity: 1;
+    }
+
+    .social-icon {
+        opacity: 1;
+        color: $secondary;
     }
 }
