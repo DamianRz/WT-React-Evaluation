@@ -8,9 +8,9 @@ export const SocialBox = ({ title, socialItems }) => {
         <div className="social-box">
             {title && <p className="title theme-text">{title}</p>}
 
-            {socialItems.map(social => {
+            {socialItems.map((social, i) => {
                 return (
-                    <a href={social.url}>
+                    <a href={social.url} key={i}>
                         <div className="social-icon">{social.icon}</div>
                     </a>
                 )

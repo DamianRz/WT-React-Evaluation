@@ -29,19 +29,4 @@
             margin: auto;
         }
     }
-
-    .social-icon:hover {
-        color: $s_light !important;
-    }
-}
-
-.social-box:hover {
-    .title {
-        opacity: 1;
-    }
-
-    .social-icon {
-        opacity: 1;
-        color: $secondary;
-    }
 }
