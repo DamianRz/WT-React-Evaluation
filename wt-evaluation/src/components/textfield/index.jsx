@@ -18,7 +18,6 @@ export const Textfield = ({
 }) => {
 
     const [value, setValue] = useState(defaultvalue || '');
-    const [error, setError] = useState('');
     const [checked, setCheck] = useState(true);
 
     const {
@@ -26,8 +25,9 @@ export const Textfield = ({
     } = useContext(FormContext);
 
     useEffect(() => {
-        setField(name, type, error, value, equalField, label);
+        setField(name, type, value, equalField, label);
         onChange && onChange(value);
+        // eslint-disable-next-line
     }, [value]);
 
 
