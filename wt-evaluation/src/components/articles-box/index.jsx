@@ -8,7 +8,7 @@ export const ArticlesBox = ({ items, title, className }) => {
 
     // Use hook for get the screen size
     const screenSize = useScreenSize();
-    let articleWidth = screenSize.size.width > 576 ? 200 : (screenSize.size.width);
+    let articleWidth = screenSize.size.width > 576 ? 245 : (screenSize.size.width);
 
     // Article item 
     const Article = ({ img, title, info }) => {
@@ -22,7 +22,6 @@ export const ArticlesBox = ({ items, title, className }) => {
             </div>
         )
     }
-
 
     // Create table content 
     // structure: trItems[tdItems[]]
