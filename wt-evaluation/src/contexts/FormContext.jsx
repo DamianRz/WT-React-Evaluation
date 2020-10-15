@@ -60,7 +60,6 @@ export const FormProvider = ({
         let success = true;
         setErrors({});
         let errorsCopy = {};
-        // let fieldsCopy = fields;
         Object.keys(fields).map(fieldName => {
             if (!fields[fieldName].value) {
                 success = false;
@@ -73,10 +72,15 @@ export const FormProvider = ({
                             Object.assign(errorsCopy, { [fieldName]: 'Debe ingresar solo letras' })
                             success = false;
                         }
+                        if (String(fieldValue).length < 2) {
+                            Object.assign(errorsCopy, { [fieldName]: 'Debe contener mas de 2 letras' })
+                            success = false;
+                        }
                         break;
                     case 'password':
                         break;
                     case 'checkbox':
+                        console.log(fields[fieldName])
                         if (!fieldValue) {
                             Object.assign(errorsCopy, { [fieldName]: 'Debe seleccionar el cuadro' })
                             success = false;
@@ -91,17 +95,12 @@ export const FormProvider = ({
                     // its ok
                     case 'ci':
 
-
-
                         // implements the document number validator
 
                         if (!validarCedula(fieldValue)) {
                             Object.assign(errorsCopy, { [fieldName]: 'El documento no es valido!' })
                             success = false;
                         }
-
-
-
 
                         break;
                     case 'email':

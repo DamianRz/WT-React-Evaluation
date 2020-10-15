@@ -10,10 +10,16 @@ export const UserForm = () => {
 
     const [selectedDepartment, setDepartment] = useState('');
 
+
+
+
     const submit = async (dataFields) => {
-        console.log('//////////////')
+        alert('Todos los datos son correctos!')
         console.log(dataFields)
     };
+
+
+
 
     const SubmitButton = ({
         onClick
@@ -47,7 +53,7 @@ export const UserForm = () => {
                             id="name"
                             name="name"
                             label="Nombre"
-                            type="text"
+                            type="string"
                             className="textfield-item"
                         />
                         <div className="divider" />
@@ -55,7 +61,7 @@ export const UserForm = () => {
                             id="lastname"
                             name="lastname"
                             label="Apellido"
-                            type="text"
+                            type="string"
                             className="textfield-item"
                         />
                     </div>
@@ -104,6 +110,7 @@ export const UserForm = () => {
                             name="accept"
                             label="Acepto las bases y condiciones"
                             type="checkbox"
+                            value={true}
                             className="textfield-item"
                         />
                     </div>

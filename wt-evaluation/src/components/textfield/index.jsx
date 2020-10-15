@@ -19,6 +19,7 @@ export const Textfield = ({
 
     const [value, setValue] = useState(defaultvalue || '');
     const [error, setError] = useState('');
+    const [checked, setCheck] = useState(true);
 
     const {
         setField, getErrorByField, removeErrorByField, validationIsActive
@@ -31,7 +32,12 @@ export const Textfield = ({
 
 
     const handleChange = (e) => {
-        setValue(e.target.value);
+        if (type === 'checkbox') {
+            setValue(checked)
+            setCheck(value => !value)
+        } else {
+            setValue(e.target.value);
+        }
     };
 
     const ErrorLabel = ({ value }) => {
@@ -79,7 +85,6 @@ export const Textfield = ({
                     />
                 )
             }
-
             {validationIsActive() && getErrorByField(name) &&
                 <ErrorLabel value={getErrorByField(name)} />}
         </div >
