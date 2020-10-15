@@ -4,6 +4,7 @@ import { SocialBox } from '../../components/social-box';
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
 import { ProductSlider } from '../../components/product-slider';
 import { ArticlesBox } from '../../components/articles-box';
+import { UserForm } from '../../components/user-form';
 import './home.scss';
 import './home-mobile.scss';
 
@@ -86,6 +87,8 @@ export const Home = () => {
                 className="articles-box"
                 items={articlesList}
             />
+
+            <UserForm />
 
         </div>
     )

@@ -1,3 +1,6 @@
+@import '../theme/colors.scss';
+@import '../theme/fonts.scss';
+
 /* 'hidde' a element */
 a {
     color: rgb(0, 0, 0);
@@ -7,4 +10,11 @@ a {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 0;
     margin: 0;
+}
+
+.theme-title {
+    font-size: $font_size_big;
+    color: $text_dark;
+    margin-top: 20px;
+    margin-left: 20px;
 }
