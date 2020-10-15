@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './social-box.scss';
 import '../../theme/theme.scss';
 
@@ -17,9 +16,4 @@ export const SocialBox = ({ title, socialItems }) => {
             })}
         </div>
     );
-}
-
-SocialBox.propTypes = {
-    message: PropTypes.string,
-    items: PropTypes.array
 }

@@ -11,16 +11,6 @@ export const UserForm = () => {
     const [selectedDepartment, setDepartment] = useState('');
 
 
-
-
-    const submit = async (dataFields) => {
-        alert('Todos los datos son correctos!')
-        console.log(dataFields)
-    };
-
-
-
-
     const SubmitButton = ({
         onClick
     }) => {
@@ -40,6 +30,11 @@ export const UserForm = () => {
                 >ENVIAR</button>
             </div>
         );
+    };
+
+    const submit = async (dataFields) => {
+        alert('Todos los datos son correctos!')
+        console.log(dataFields)
     };
 
     return (

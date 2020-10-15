@@ -6,8 +6,8 @@
 
     .internal-label {
         position: absolute;
-        margin-top: 14px;
-        margin-left: 10px;
+        margin-top: 16px;
+        margin-left: 14px;
         font-size: $font_size_medium;
         opacity: 0.6;
     }
@@ -33,7 +33,6 @@
         height: 50px !important;
         width: calc(100% - 20px);
         padding-left: 12px !important;
-        // padding-top: 10px;
         border-style: solid;
         border-color: rgba(128, 128, 128, 0.336);
         border-width: 2px;
@@ -56,13 +55,11 @@
 
     .internal-label {
         margin-left: 30px;
-        // margin-top: -5px;
     }
 
     input {
         width: 20px;
         left: 40px;
-        // margin-bottom: 0px;
     }
 }
 

@@ -54,8 +54,15 @@ export const Textfield = ({
 
     return (
         <div className={`textfield-box type-${type} ${className}`}>
-            {!value && (type !== 'select') && < label for={id} className="internal-label">{label}</label>}
-            { value && <label for={id} className="external-label">{label}</label>}
+
+            {/* top placeholder */}
+            {!value && (type !== 'select' && type !== 'checkbox') && < label for={id} className="internal-label">{label}</label>}
+
+            {/* center placeholder */}
+            { value && (type !== 'checkbox') && <label for={id} className="external-label">{label}</label>}
+
+            {/* checkbox placeholder */}
+            {(type === 'checkbox') && < label for={id} className="internal-label">{label}</label>}
 
             {type === "select" ? (
                 <select
@@ -70,6 +77,7 @@ export const Textfield = ({
                         return <option key={i} value={item}>{item}</option>
                     })}
                 </select>
+
             ) : (
                     <input
                         id={id}
@@ -85,6 +93,8 @@ export const Textfield = ({
                     />
                 )
             }
+
+            {/* Error message  */}
             {validationIsActive() && getErrorByField(name) &&
                 <ErrorLabel value={getErrorByField(name)} />}
         </div >
