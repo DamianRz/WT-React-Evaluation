@@ -25,14 +25,14 @@
                 z-index: 1;
 
                 .name-1 {
-                    font-size: calc(6px + 2vw);
+                    font-size: calc(26px + 1vw);
                     text-transform: uppercase;
                     color: $primary;
                     opacity: 0.4;
                 }
 
                 .name-2 {
-                    font-size: calc(10px + 8vw);
+                    font-size: calc(80px + 1vw);
                     text-transform: uppercase;
                     color: $primary;
                     font-weight: bolder;
@@ -45,16 +45,15 @@
                     height: 40px;
                     border-radius: 8px;
                     border-style: none;
-                    background-color: $s_dark;
+                    background-color: $secondary;
                     color: $text_on_s;
                     font-weight: bolder;
                     letter-spacing: .5vw;
                     font-size: calc(6px + 1vw);
                 }
 
-                .buy-btn:hover {
+                .buy-btn {
                     cursor: pointer;
-                    background-color: $secondary;
                 }
             }
 
@@ -74,15 +73,17 @@
                     .usd,
                     .cents,
                     .month {
-                        font-size: calc(6px + 2vw);
+                        font-size: calc(26px + 1vw);
                         color: $text_on_p;
+                        text-shadow: 2px 2px 2px #6d6c6c;
                     }
 
                     .price {
-                        font-size: calc(10px + 8vw);
+                        font-size: calc(80px + 1vw);
                         text-transform: uppercase;
                         color: $text_on_p;
                         font-weight: bolder;
+                        text-shadow: 2px 2px 2px #6d6c6c;
                     }
                 }
 
@@ -93,7 +94,7 @@
                     display: block;
                     margin: auto;
                     filter: grayscale(1);
-                    opacity: 0.8;
+                    opacity: 0.4;
                     transform: rotate(170deg);
                 }
 

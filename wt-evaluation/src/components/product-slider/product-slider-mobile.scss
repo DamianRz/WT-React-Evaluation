@@ -1,6 +1,6 @@
 @import '../../theme/screen-sizes.scss';
 
-@media only screen and (max-width: $mobile-screeen-width) {
+@media only screen and (max-width: ($mobile-screeen-width+200)) {
 
     .product-slider {
         .slider {
@@ -12,6 +12,8 @@
         }
 
         .product-step {
+            padding: 0;
+
             .product {
                 display: flex;
                 padding: 20px 0px;
@@ -19,15 +21,6 @@
                 height: max-content;
 
                 .left-box {
-
-                    .name-1 {
-                        font-size: 26px !important;
-                    }
-
-                    .name-2 {
-                        font-size: 80px !important;
-                    }
-
                     .buy-btn {
                         margin-top: 80%;
                     }
@@ -35,19 +28,10 @@
 
                 .right-box {
                     height: max-content;
-
-                    .usd,
-                    .cents,
-                    .month {
-                        font-size: 26px !important;
-                    }
-
-                    .price {
-                        font-size: 80px !important;
-                    }
+                    margin-top: 60px;
 
                     .paint-img {
-                        min-width: 440px;
+                        width: 100vw !important;
                         left: 18vw;
                     }
                 }

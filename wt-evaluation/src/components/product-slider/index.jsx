@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Slider } from '../slider';
 import Paint1 from '../../paint-1.png';
 import Paint2 from '../../paint-2.png';
@@ -8,9 +8,6 @@ import './product-slider-mobile.scss';
 import '../../theme/theme.scss';
 
 export const ProductSlider = () => {
-
-    const [activeEffect, setActiveEffect] = useState(false);
-
     const productsData = [
         {
             name: 'product one',
@@ -37,16 +34,10 @@ export const ProductSlider = () => {
                         <p className="name-1 theme-text">{name.split(' ')[0]}</p>
                         <p className="name-2 theme-text">{name.split(' ')[1]}</p>
                         <button
-                            onMouseEnter={() => {
-                                setActiveEffect(true)
-                            }}
-                            onMouseLeave={() => {
-                                setActiveEffect(false)
-                            }}
                             className="buy-btn">COMPRAR</button>
                     </div>
                     <div className="right-box">
-                        <img className={`paint-img ${activeEffect && 'active'}`} src={img} alt="" />
+                        <img className={`paint-img`} src={img} alt="" />
                         <div className="price-box">
                             <table>
                                 <tr>
@@ -76,9 +67,10 @@ export const ProductSlider = () => {
     }
 
     const getProductsSteps = () => {
-        return productsData.map(product => {
+        return productsData.map((product, i) => {
             return (
                 <ProductStep
+                    key={i}
                     name={product.name}
                     price={product.price}
                     img={product.img} />
