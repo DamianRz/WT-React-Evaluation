@@ -8,12 +8,12 @@ export const ArticlesBox = ({ items, title, className }) => {
 
     // Use hook for get the screen size
     const screenSize = useScreenSize();
-    const articleWidth = 240; // padding: 40px
+    let articleWidth = screenSize.size.width > 576 ? 200 : (screenSize.size.width);
 
     // Article item 
     const Article = ({ img, title, info }) => {
         return (
-            <div className="article">
+            <div className="article" style={{ width: articleWidth }}>
                 <div className="article-img">
                     <img src={img} alt="" />
                 </div>
@@ -23,22 +23,20 @@ export const ArticlesBox = ({ items, title, className }) => {
         )
     }
 
-    {
-        /* Create table content 
-        structure: trItems[tdItems[]]
 
-        Calculate the the available space for insert Article component.
-        */
-    }
-    const createTableContent = () => {
+    // Create table content 
+    // structure: trItems[tdItems[]]
+    // Calculate the the available space for insert Article component.
+
+    const ArticlesTable = () => {
         let structure = [[]];
         let index = -1;
 
-        items.map((article) => {
-            if (index < Math.floor(screenSize.size.width / articleWidth - 1)) {
+        items.map((article, i) => {
+            if (index < Math.floor((screenSize.size.width / (articleWidth + 40)) - 1)) {
                 index++;
                 structure[structure.length - 1].push(
-                    <td>
+                    <td key={i}>
                         <Article
                             img={article.img}
                             title={article.title}
@@ -49,7 +47,7 @@ export const ArticlesBox = ({ items, title, className }) => {
             } else {
                 index = 0;
                 structure.push(
-                    [<td>
+                    [<td key={i}>
                         <Article
                             img={article.img}
                             title={article.title}
@@ -58,38 +56,31 @@ export const ArticlesBox = ({ items, title, className }) => {
                     </td>]
                 )
             }
-        })
+            return null;
+        });
 
-        return structure.map(trItem => {
-            return (
-                <tr>
-                    {trItem.map((tdItem, i) => {
-                        return tdItem
+        return (
+            <table>
+                <tbody>
+                    {structure.map((trItem, i) => {
+                        return (
+                            <tr index={i} key={i}>
+                                {trItem.map((tdItem, i) => {
+                                    return tdItem
+                                })}
+                            </tr>
+                        )
                     })}
-                </tr>
-            )
-        })
+                </tbody>
+            </table>
+        )
     }
 
     return (
         <div className={`articles-box ${className}`}>
             {title && <p className="title theme-text">{title}</p>}
             <div className="articles">
-
-                <table>
-                    {createTableContent()}
-                </table>
-
-                {/* easy way, but have problems */}
-                {/* {items.map(article => {
-                    return (
-                        <Article
-                            img={article.img}
-                            title={article.title}
-                            info={article.info}
-                        />
-                    )
-                })} */}
+                <ArticlesTable />
             </div>
         </div>
     );
