@@ -18,3 +18,16 @@ a {
     margin-top: 20px;
     margin-left: 20px;
 }
+
+.theme-button {
+    min-width: 150px;
+    height: 60px;
+    border-radius: 8px;
+    border-style: none;
+    background-color: $secondary;
+    color: $text_on_s;
+    // font-weight: bolder;
+    letter-spacing: .3vw;
+    font-size: calc(6px + 1vw);
+    cursor: pointer;
+}

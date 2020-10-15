@@ -34,7 +34,7 @@ export const ProductSlider = () => {
                         <p className="name-1 theme-text">{name.split(' ')[0]}</p>
                         <p className="name-2 theme-text">{name.split(' ')[1]}</p>
                         <button
-                            className="buy-btn">COMPRAR</button>
+                            className="buy-btn theme-button">COMPRAR</button>
                     </div>
                     <div className="right-box">
                         <img className={`paint-img`} src={img} alt="" />

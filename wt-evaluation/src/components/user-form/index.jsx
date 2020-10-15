@@ -4,6 +4,7 @@ import { FormContext, FormProvider } from '../../contexts/FormContext';
 import { dptosLocs } from '../../data/datos';
 import './user-form.scss';
 import '../../theme/theme.scss';
+import './user-form-mobile.scss';
 
 export const UserForm = () => {
 
@@ -22,13 +23,16 @@ export const UserForm = () => {
             getFields,
         } = useContext(FormContext);
         return (
-            <button
-                onClick={() => {
-                    if (validateFields()) {
-                        onClick(getFields());
-                    }
-                }}
-            >ENVIAR</button>
+            <div className="submit-box">
+                <button
+                    className="submit-btn theme-button"
+                    onClick={() => {
+                        if (validateFields()) {
+                            onClick(getFields());
+                        }
+                    }}
+                >ENVIAR</button>
+            </div>
         );
     };
 

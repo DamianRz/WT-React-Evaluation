@@ -6,16 +6,18 @@
 
     .internal-label {
         position: absolute;
-        margin-top: 8px;
+        margin-top: 14px;
         margin-left: 10px;
-        // opacity: 0.6;
-        font-size: 12px;
+        font-size: $font_size_medium;
+        opacity: 0.6;
     }
 
     .external-label {
         position: absolute;
-        margin-top: -20px;
+        margin-top: 2px;
+        margin-left: 12px;
         font-size: 12px;
+        opacity: 0.6;
     }
 
     .error-label {
@@ -27,37 +29,50 @@
     }
 
     input {
-        font-size: $font_size_small;
-        height: 30px;
-        width: 100%;
-        padding: 0 10px;
+        font-size: $font_size_medium;
+        height: 50px !important;
+        width: calc(100% - 20px);
+        padding-left: 12px !important;
+        // padding-top: 10px;
+        border-style: solid;
         border-color: rgba(128, 128, 128, 0.336);
         border-width: 2px;
         border-radius: 4px;
     }
 
+    input[type="text"i] {
+        padding: 0 10px !important;
+    }
+
     .error {
-        border-color: $text_error;
+        border-style: solid;
+        border-color: $text_error !important;
     }
 }
 
 // custom input types
 .type-checkbox {
+    margin-top: -2px;
+
     .internal-label {
-        margin-left: 60px;
+        margin-left: 30px;
+        // margin-top: -5px;
     }
 
     input {
-        width: auto;
+        width: 20px;
         left: 40px;
+        // margin-bottom: 0px;
     }
 }
 
 .select-box {
-    font-size: $font_size_small;
-    height: 30px;
+    font-size: $font_size_medium;
+    height: 50px;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 6px;
+    padding-top: 0;
+    border-style: solid;
     border-color: rgba(128, 128, 128, 0.336);
     border-width: 2px;
     border-radius: 4px;
