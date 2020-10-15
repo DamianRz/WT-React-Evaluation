@@ -1,0 +1,15 @@
+@import '../../theme/screen-sizes.scss';
+
+@media only screen and (max-width: ($mobile-screeen-width+200)) {
+    .user-form {
+        .form-box {
+            .flex-fields {
+                width: 80%;
+            }
+
+            .large-field {
+                width: 80%;
+            }
+        }
+    }
+}

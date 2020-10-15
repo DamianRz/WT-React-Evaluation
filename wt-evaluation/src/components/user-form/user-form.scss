@@ -1,0 +1,56 @@
+.user-form {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+
+    .form-title {
+        text-align: center;
+        margin: 0;
+    }
+
+    .form-box {
+        width: 100%;
+
+        .flex-fields {
+            width: 60%;
+            max-width: 600px;
+            display: flex;
+            margin: auto;
+
+            .divider {
+                position: relative;
+                width: 10%;
+                min-width: 40px;
+                height: 30px;
+            }
+
+            .textfield-item {
+                position: relative;
+                width: 50%;
+            }
+        }
+
+        .large-field {
+            width: 60%;
+            max-width: 600px;
+            display: flex;
+            margin: auto;
+
+            .textfield-item {
+                width: 100%;
+            }
+        }
+
+        .submit-box {
+            position: relative;
+            width: max-content;
+            height: max-content;
+            margin: auto;
+            margin-top: 20px;
+
+            .submit-btn {
+                margin: auto !important;
+            }
+        }
+    }
+}

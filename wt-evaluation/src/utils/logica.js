@@ -2,7 +2,7 @@
 /********************** VALIDACION DADA PARA SER UTILIZADA ***************************************************************/
 /*************************************************************************************************************************/
 
-function validarCedula(ci) {
+export function validarCedula(ci) {
     //Inicializo los coefcientes en el orden correcto
     var arrCoefs = new Array(2, 9, 8, 7, 6, 3, 4, 1);
     var suma = 0;
