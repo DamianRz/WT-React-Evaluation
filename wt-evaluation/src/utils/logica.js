@@ -4,6 +4,7 @@
 
 export function validarCedula(ci) {
     //Inicializo los coefcientes en el orden correcto
+    // eslint-disable-next-line
     var arrCoefs = new Array(2, 9, 8, 7, 6, 3, 4, 1);
     var suma = 0;
     //Para el caso en el que la CI tiene menos de 8 digitos

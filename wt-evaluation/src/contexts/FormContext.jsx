@@ -19,7 +19,6 @@ export const FormContext = createContext({
 export const FormProvider = ({
     children
 }) => {
-
     const [fields, setFields] = useState({});
     const [errors, setErrors] = useState({});
     const [flagValidation, setFlagValidation] = useState(true);
@@ -36,11 +35,11 @@ export const FormProvider = ({
         setFlagValidation(value)
     }
 
-    const setField = (name, type, error, value, equalField, label) => {
+    const setField = (name, type, value, equalField, label) => {
         let fieldsCopy = fields;
         Object.assign(fieldsCopy, {
             [name]: {
-                value: value, type: type, error: error, equalField: equalField, label: label
+                value: value, type: type, equalField: equalField, label: label
             }
         });
         setFields(fieldsCopy);
@@ -60,12 +59,14 @@ export const FormProvider = ({
         let success = true;
         setErrors({});
         let errorsCopy = {};
+        // eslint-disable-next-line
         Object.keys(fields).map(fieldName => {
             if (!fields[fieldName].value) {
                 success = false;
                 Object.assign(errorsCopy, { [fieldName]: 'El campo es requerido' })
             } else {
                 let fieldValue = fields[fieldName].value;
+                // eslint-disable-next-line
                 switch (fields[fieldName].type) {
                     case 'string':
                         if (!/^[A-Za-z\s]+$/.test(fieldValue)) {
@@ -92,18 +93,15 @@ export const FormProvider = ({
                             success = false;
                         }
                         break;
-                    // its ok
                     case 'ci':
-
                         // implements the document number validator
-
                         if (!validarCedula(fieldValue)) {
                             Object.assign(errorsCopy, { [fieldName]: 'El documento no es valido!' })
                             success = false;
                         }
-
                         break;
                     case 'email':
+                        // eslint-disable-next-line
                         if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(fieldValue)) {
                             Object.assign(errorsCopy, { [fieldName]: 'El email no es correco' })
                             success = false;
