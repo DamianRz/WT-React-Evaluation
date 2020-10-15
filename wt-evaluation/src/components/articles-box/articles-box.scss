@@ -1,0 +1,52 @@
+@import '../../theme/colors.scss';
+@import '../../theme/fonts.scss';
+
+.articles-box {
+    .title {
+        color: $text_dark;
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: $font_size_big;
+    }
+
+    .articles {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px 0;
+
+        table {
+            margin: auto;
+
+            td {
+                vertical-align: baseline;
+            }
+        }
+
+        .article {
+            position: relative;
+            border-radius: 8px;
+            margin: 20px 10px;
+            box-shadow: 0px 2px 1px 1px $p_light;
+
+            .article-img {
+                width: 100%;
+                height: 200px;
+                background-color: $p_light;
+                border-radius: 8px 8px 0px 0px;
+            }
+
+            .article-title {
+                margin: 20px 20px;
+                font-weight: bolder;
+                color: $text_dark;
+                font-size: $font_size_medium;
+            }
+
+            .article-info {
+                padding: 0px 20px 20px 20px;
+                color: $text_dark;
+                font-size: $font_size_small;
+            }
+        }
+    }
+}

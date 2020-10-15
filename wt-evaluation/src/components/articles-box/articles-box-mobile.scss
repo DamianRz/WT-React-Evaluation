@@ -1,0 +1,23 @@
+@import '../../theme/screen-sizes.scss';
+
+@media only screen and (max-width: $mobile-screeen-width) {
+    .articles-box {
+        .articles {
+            table {
+                margin: 0 !important;
+
+                td {
+                    width: 100%;
+                    padding: 0 20px;
+                }
+            }
+
+            .article {
+                // block the dinamic charge of width y the screen size
+                width: 100% !important;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

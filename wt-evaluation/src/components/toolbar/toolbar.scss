@@ -1,4 +1,5 @@
 @import '../../theme/colors.scss';
+@import '../../theme/fonts.scss';
 
 .toolbar {
     position: relative;
@@ -13,6 +14,7 @@
 
         .title {
             color: $text_on_p;
+            font-size: $font_size_medium;
         }
     }
 
